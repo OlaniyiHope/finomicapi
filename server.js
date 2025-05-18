@@ -60,5 +60,9 @@ app.use("/api/ai", aiRoute);
 // app.use("/api/", commonRoute(s3));
 
 // app.use("/api/", commonRoute(s3));
+// const PORT = process.env.PORT || 8000;
+// app.listen(PORT, console.log(`Server running on port ${PORT}`));
 const PORT = process.env.PORT || 8000;
-app.listen(PORT, console.log(`Server running on port ${PORT}`));
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server running on port ${PORT}`);
+});
