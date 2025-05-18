@@ -24,6 +24,8 @@ const corsOptions = {
     "http://localhost:5173",
     "https://dreamsimu.vercel.app",
     "https://www.lifemirror.org",
+    "http://user.finomic.ai",
+    "https://user.finomic.ai",
     "https://lifemirror.org",
     "https://lifemirrordashboard.vercel.app",
     "https://dashboard.lifemirror.org",
@@ -47,12 +49,6 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// app.use((req, res, next) => {
-//   res.header("Access-Control-Allow-Origin", "https://blog.zarichtravels.com");
-//   res.header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-//   res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//   next();
-// });
 app.use("/api/auth", authRoute);
 app.use("/api/ai", aiRoute);
 
